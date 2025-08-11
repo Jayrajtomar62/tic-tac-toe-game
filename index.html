@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="overlay" class="hidden"></div>
+
+<div id="mode-selection">
+  <h2>Select Game Mode</h2>
+  <button onclick="chooseMode('solo')">Solo (1 Player)</button>
+  <button onclick="chooseMode('multi')">Multiplayer</button>
+</div>
+
+<div id="difficulty-selection" class="hidden">
+  <h2>Select Difficulty</h2>
+  <button onclick="startGame(1, 'easy')">Easy</button>
+  <button onclick="startGame(1, 'medium')">Medium</button>
+  <button onclick="startGame(1, 'hard')">Hard</button>
+</div>
+
+<div id="players-selection" class="hidden">
+  <h2>How many players?</h2>
+  <button onclick="startGame(2)">2 Players</button>
+  <button onclick="startGame(3)">3 Players</button>
+  <button onclick="startGame(4)">4 Players</button>
+</div>
+
+<div id="game-container" class="hidden">
+  <div id="header">
+    <div id="turn-indicator"></div>
+    <button id="exit-btn" onclick="resetGame()">Exit</button>
+  </div>
+  <div id="scoreboard"></div>
+  <div id="game-board" class="board"></div>
+</div>
+
+<div id="popup" class="popup hidden">
+  <div id="popup-message"></div>
+  <button onclick="restartSameGame()">Play Again</button>
+  <button onclick="fullReset()">Restart</button>
+</div>
+
+<audio id="move-sound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+<audio id="win-sound" src="https://www.soundjay.com/misc/sounds/bell-ringing-01.mp3"></audio>
+<audio id="draw-sound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
